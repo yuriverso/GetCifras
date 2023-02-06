@@ -18,7 +18,7 @@ Depois procurará no Google e retornará o site encontrado. Caso não encontre, 
 
 Agora basta aprender a tocar!
 
-# ------------------------------------------------------------------------------
+# ----------------------------------------------------------------
 
 # GetCifras
 
