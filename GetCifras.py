@@ -64,6 +64,7 @@ def downloadTab(songName, url):
     
 
 def main():
+    print("***** Welcome to GetCifras! *****")
     while True:
         songName = input("Type the song name (x to exit): ")
         if songName == "" or songName == None:
