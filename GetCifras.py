@@ -56,7 +56,15 @@ def downloadTab(songName, url):
     musicTab = soup.find("pre").text
     
     if songName+".txt" in listdir("cifras"):
-        songName+="_2"
+        counter = 1
+        while True:
+            oldSongName = songName
+            counter += 1
+            songName += "_"+str(counter)
+            if songName+".txt" in listdir("cifras"):
+                songName = oldSongName
+            else:
+                break
         
     with open("cifras/"+songName+".txt", 'w', encoding = "utf-8") as f:
         f.write(musicTab)
@@ -64,7 +72,7 @@ def downloadTab(songName, url):
     
 
 def main():
-    print("***** Welcome to GetCifras! *****")
+    print("***** Welcome to GetCifras! *****\n")
     while True:
         songName = input("Type the song name (x to exit): ")
         if songName == "" or songName == None:
